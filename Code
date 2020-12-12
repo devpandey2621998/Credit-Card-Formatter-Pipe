@@ -1,0 +1,17 @@
+<input [ngModel]="item.value" 
+  (ngModelChange)="getNewValue($event)" name="inputField" type="text" />
+
+
+import { UseMyPipeToFormatThatValuePipe } from './path';
+
+constructor({
+    private UseMyPipeToFormatThatValue: UseMyPipeToFormatThatValuePipe,
+})
+
+getNewValue(ev: any): any {
+    item.value= this.useMyPipeToFormatThatValue.transform(ev);
+}
+
+
+Iss method mai implement kr lena 
+useMyPipeToFormatThatValue() 
